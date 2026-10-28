@@ -6,12 +6,14 @@ class BankAccount:
         self.name = account_name
         self.account_number = account_number
 
+#Any value that is invalid (negative or greater than the current amount) returns false
     def withdraw(self, amount):
         if amount > self.balance or amount <= 0:
             return False
         self.balance -= amount
         return True
 
+#Any value that is invalid (negative or greater than the current amount) returns false
     def deposit(self, amount):
         if amount <= 0:
             return False
